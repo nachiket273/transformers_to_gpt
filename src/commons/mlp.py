@@ -28,9 +28,9 @@ class MLP(Module):
                                        Default: True
 
     Example:
-        >>> lnorm = LayerNorm(4)
+        >>> mlp = MLP(4)
         >>> x = torch.randn((5, 4))
-        >>> output = lnorm(x)
+        >>> output = mlp(x)
     """
     def __init__(self, input_features: int, hidden_features: int = None, out_features: int = None,
                  bias: bool = True, actn= ReLU, dropout_ratio: float = 0.1, inplace: bool = True ) -> None:
@@ -67,13 +67,3 @@ class MLP(Module):
 hidden_features={self.fc1.out_features}, out_features={self.fc2.out_features}, \
 bias={self.bias}, actn={self.actn.__class__.__name__}, dropout_ratio={self.dropout.p}, \
 inplace={self.dropout.inplace})"
-
-
-a = MLP(4)
-b = randn((5, 4))
-print("\n\nMLP: ")
-print(a)
-print("\n\nTensor: ")
-print(b)
-print("\n\nOut: ")
-print(a(b))
