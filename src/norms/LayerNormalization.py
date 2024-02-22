@@ -60,5 +60,5 @@ class LayerNorm(Module):
         return norm
     
     def __repr__(self):
-        return f"{self.__class__.__name__}(shape = {self.shape},\
-              eps={self.eps}, gamma={self.gamma}, offset={self.offset})"
+        return f"{self.__class__.__name__}(shape = {self.shape}, \
+eps={self.eps}, gamma={self.gamma}, offset={self.offset})"
